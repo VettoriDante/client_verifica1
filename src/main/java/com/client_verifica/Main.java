@@ -50,6 +50,13 @@ public class Main {
                     default:
                     break;
             }
+            if(!go){
+                System.out.println("Desideri giocare ancora? (Y si / altri segni = no)");
+                input = inputReader.nextLine();
+                out.writeBytes(input + "\n");
+                input = in.readLine();
+                if(input.equalsIgnoreCase("y")) go = true;
+            }
         } while (go);
         inputReader.close();
     }
