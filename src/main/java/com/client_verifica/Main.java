@@ -17,7 +17,6 @@ public class Main {
         DataOutputStream out = new DataOutputStream(s.getOutputStream());
         Scanner inputReader = new Scanner(System.in);
         boolean go = true;
-        String score = "";
         
         do {
             // tentativo
@@ -43,13 +42,14 @@ public class Main {
                 break;
                 case "=":
                     String tentativi = in.readLine();
+                    String classifica = in.readLine();
                     System.out.println("Complimenti hai indovinato dopo " + tentativi + " tentativi");
+                    System.out.println("Classifica = " + classifica);
                     go = false;
                 break;
                     default:
                     break;
             }
-
         } while (go);
         inputReader.close();
     }
